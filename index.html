@@ -13,30 +13,49 @@ Post-Term Abortion Calculator
 <body>
 <!-- mit license -->
 <div id='main'>
-<h1>If your mother were to kill you it would be what is commonly known as a "post-term abortion". Find out which trimester abortion she'd have if she killed you today by entering your date of birth in the form below!</h1>
-<form>
-<div><label>Day:<input id='date' type='number' min=1 value=1 max=31></label></div>
-<div><label>Month:
-  <select id='month'>
-    <option value='0'>January</option>
-    <option value='1'>February</option>
-    <option value='2'>March</option>
-    <option value='3'>April</option>
-    <option value='4'>May</option>
-    <option value='5'>June</option>
-    <option value='6'>July</option>
-    <option value='7'>August</option>
-    <option value='8'>September</option>
-    <option value='9'>October</option>
-    <option value='10'>November</option>
-    <option value='11'>December</option>
-  </select>
-</label></div>
-<div><label>Year:<input id='year' type='number' value=2000></label></div>
-</form>
+  <h1>If your mother were to kill you it would be what is commonly known as a "post-term abortion". Find out which trimester abortion she'd have if she killed you today by entering your date of birth in the form below!</h1>
+  <form>
+    <div><label>Day:<input id='date' type='number' min=1 value=1 max=31></label></div>
+    <div><label>Month:
+      <select id='month'>
+        <option value='0'>January</option>
+        <option value='1'>February</option>
+        <option value='2'>March</option>
+        <option value='3'>April</option>
+        <option value='4'>May</option>
+        <option value='5'>June</option>
+        <option value='6'>July</option>
+        <option value='7'>August</option>
+        <option value='8'>September</option>
+        <option value='9'>October</option>
+        <option value='10'>November</option>
+        <option value='11'>December</option>
+      </select>
+    </label></div>
+    <div><label>Year:<input id='year' type='number' value=2000></label></div>
+  </form>
+  <div id='second'>
+    <button id='button' type='button' class='button large expanded'>Calculate!</input>
+  </div>
 </div>
-<div id='second'>
-<button id='button' type='button' class='button large expanded'>Calculate!</input>
+<div id="result" style="display:none;">
+  <h1 id="result-text">
+      <span id="part-1">
+        
+      </span>
+      <strong id="part-2">
+
+      </strong>
+      <span id="part-3">
+
+      </span>
+  </h1>
+  <div>
+    <a id="tweet-this" href="https://www.google.com" class="button large expanded">Tweet this!</a>
+  </div>
+  <div>
+    <button id='restart' class="button large expanded"> Back to start </button>
+  </div>
 </div>
 <script src='index.js'></script>
 </body>
