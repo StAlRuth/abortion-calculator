@@ -36,6 +36,6 @@ document.getElementById('button').onclick = function(e) {
   console.log(birthday);
   let trimesters = getTrimesters(birthday);
   document.getElementById('main').innerHTML = '<h1>If your mother killed you today, it would be ' + getArticle(trimesters) + ' <strong>' + index(trimesters) + '</strong> trimester abortion.</h1>'
-  document.getElementById('second').innerHTML = '<a href="https://twitter.com/intent/tweet?text=' + encodeURIComponent('If my mother killed me today, it would be ' + getArticle(trimesters) + ' ' + index(trimesters) + ' trimester abortion!') + '" class="button large expanded">Tweet this!</a>';
+  document.getElementById('second').innerHTML = '<a href="https://twitter.com/intent/tweet?text=' + encodeURIComponent('If my mother killed me today, it would be ' + getArticle(trimesters) + ' ' + index(trimesters) + ' trimester abortion! Find out for yourself at https://stalruth.github.io/abortion-calculator/ #PostNatalAbortion #HerChildrenHerChoice') + '" class="button large expanded">Tweet this!</a>';
 }
 
