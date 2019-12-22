@@ -31,12 +31,19 @@ function getArticle(number) {
   }
 }
 
-document.getElementById('button').onclick = function(e) {
-  let birthday = new Date(document.getElementById('year').value, document.getElementById('month').value, document.getElementById('date').value);
-  console.log(birthday);
-  let trimesters = getTrimesters(birthday);
-  document.getElementById('main').innerHTML = '<h1>If your mother killed you today, it would be ' + getArticle(trimesters) + ' <strong>' + index(trimesters) + '</strong> trimester abortion.</h1>'
-  document.getElementById('second').innerHTML = '<a href="https://twitter.com/intent/tweet?text=' + encodeURIComponent('If my mother aborted me today, it would be ' + getArticle(trimesters) + ' ' + index(trimesters) + ' trimester abortion! Find out for yourself at https://stalruth.github.io/abortion-calculator/ #PostNatalAbortion #HerChildrenHerChoice') + '" class="button large expanded">Tweet this!</a>';
-  document.getElementById('second').innerHTML += '<a onclick="window.location.reload(false);" class="button large expanded">Back to start</a>';
+document.getElementById('button').onclick = (e) => {
+  const birthday = new Date(document.getElementById('year').value, document.getElementById('month').value, document.getElementById('date').value);
+  const trimesters = getTrimesters(birthday);
+  const tweet = `If my mother aborted me today, it would be ${getArticle(trimesters)} ${index(trimesters)} trimester abortion! Find out for yourself at https://stalruth.github.io/abortion-calculator/ #PostNatalAbortion #HerChildrenHerChoice`;
+  document.getElementById('main').style.display = 'none';
+  document.getElementById('result').style.display = 'block';
+  document.getElementById('part-1').innerText = `If your mother killed you today, it would be ${getArticle(trimesters)} `;
+  document.getElementById('part-2').innerText = `${index(trimesters)}`;
+  document.getElementById('part-3').innerText = ` trimester abortion. `;
+  document.getElementById('tweet-this').href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweet)}`;
 }
 
+document.getElementById('restart').onclick = ()=>{
+  document.getElementById('main').style.display = 'block';
+  document.getElementById('result').style.display = 'none';
+}
