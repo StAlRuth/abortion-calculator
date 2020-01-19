@@ -21,7 +21,7 @@ function index(number) {
 }
 
 function getArticle(number) {
-  string = "" + Math.floor(number);
+  var string = "" + Math.floor(number);
   if(string.length % 3 == 2) {
     string = string.substring(0, 2);
     return string == "18" || string[0] == "8" ? "an" : "a";
