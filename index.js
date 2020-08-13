@@ -34,7 +34,7 @@ function getArticle(number) {
 document.getElementById('button').onclick = (e) => {
   const birthday = new Date(document.getElementById('year').value, document.getElementById('month').value, document.getElementById('date').value);
   const trimesters = getTrimesters(birthday);
-  const tweet = `If my mother aborted me today, it would be ${getArticle(trimesters)} ${index(trimesters)} trimester abortion! Find out for yourself at https://stalruth.github.io/abortion-calculator/ #PostNatalAbortion #HerChildrenHerChoice`;
+  const tweet = `If my mother aborted me today, it would be ${getArticle(trimesters)} ${index(trimesters)} trimester abortion! Find out for yourself at https://abortion.stalruth.dev/ #PostNatalAbortion #HerChildrenHerChoice`;
   document.getElementById('main').style.display = 'none';
   document.getElementById('result').style.display = 'block';
   document.getElementById('part-1').innerText = `If your mother killed you today, it would be ${getArticle(trimesters)} `;
